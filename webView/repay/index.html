@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>还款主页</title>
+  <link rel="stylesheet" href="../../public/css/index.css">
+  <link rel="stylesheet" href="./css/index.css">
+  <script src="../../public/js/adaption.js"></script>
+</head>
+
+<!-- TODO
+ *
+ * 注释部分为相同页面的不同可能性
+ *
+ * -->
+
+<body>
+  <div class="repay">
+    <!-- 暂无待还借款 -->
+    <!-- <section class="repayNo">
+      <img class="repayNo-icon" src="./img/no_repay.png">
+      <p class="repayNo-title">暂无待还借款</p>
+      <p class="repayNo-btn">立即申请</p>
+    </section> -->
+    <!-- 有借款 -->
+    <section class="repayHas">
+      <div class="repayHas-bg"></div>
+      <header class="repayHas-header">
+        <p class="repayHas-title">待还金额<span class="repayHas-tips">已逾期</span>
+        </p>
+        <p class="repayHas-money">
+          <span class="repayHas-money-unit">￥</span>1007.00
+        </p>
+        <!-- <p class="repayHas-btn">立即还款</p> -->
+        <!-- <p class="repayHas-btn">逾期还款</p> -->
+        <p class="repayHas-btn repayHas-loading-btn">还款中</p>
+      </header>
+      <dl class="repayHas-content">
+        <dt class="repayHas-content-title">
+          <span class="repayHas-content-tips">//</span>账单详情<span class="repayHas-content-tips">//</span>
+        </dt>
+        <dd class="repayHas-content-item">
+          <span class="label">借款金额</span>
+          <span class="val">￥1000.00</span>
+        </dd>
+        <dd class="repayHas-content-item">
+          <span class="label">借款期限</span>
+          <span class="val">7天</span>
+        </dd>
+        <dd class="repayHas-content-item">
+          <span class="label">借款利息</span>
+          <span class="val">￥7.00</span>
+        </dd>
+        <dd class="repayHas-content-item">
+          <span class="label">放款日期</span>
+          <span class="val">2019-01-06</span>
+        </dd>
+        <dd class="repayHas-content-item">
+          <span class="label">应还日期</span>
+          <span class="val">2019-01-13</span>
+        </dd>
+        <dd class="repayHas-content-item">
+          <span class="label">应还金额</span>
+          <span class="val">￥1007.00</span>
+        </dd>
+        <dd class="repayHas-content-item color_warning">
+          <span class="label">逾期罚息</span>
+          <span class="val">￥140.00</span>
+        </dd>
+        <dd class="repayHas-content-item color_warning">
+          <span class="label">已还金额</span>
+          <span class="val">￥0.00</span>
+        </dd>
+      </dl>
+      <footer class="repayHas-footer">良好的信用是您未来发展之本</footer>
+    </section>
+  </div>
+</body>
+
+</html>

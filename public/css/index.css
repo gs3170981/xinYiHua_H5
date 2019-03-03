@@ -1,0 +1,21 @@
+html,
+body,
+p,
+dd {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  background: #f7f8fa;
+  font-family: Helvetica, Tahoma, Arial, "PingFang SC", "Hiragino Sans GB", "Heiti SC", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+}
+
+html,
+body {
+  height: 100vh;
+}
+
+.color_warning {
+  color: #ffb600;
+}
