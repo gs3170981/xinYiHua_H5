@@ -1,9 +1,15 @@
 html,
 body,
 p,
-dd {
+dd,
+ul,
+li {
   margin: 0;
   padding: 0;
+}
+
+li {
+  list-style: none;
 }
 
 html {
@@ -11,11 +17,10 @@ html {
   font-family: Helvetica, Tahoma, Arial, "PingFang SC", "Hiragino Sans GB", "Heiti SC", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
 }
 
-html,
-body {
-  height: 100vh;
+.bgColor_hui {
+  background: #d2d5db;
 }
 
 .color_warning {
-  color: #ffb600;
+  color: #ffb600 !important;
 }

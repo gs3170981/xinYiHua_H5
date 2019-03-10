@@ -1,6 +1,4 @@
-.repay {
-  height: 100%;
-}
+.repay {}
 
 .repayNo {
   display: flex;
@@ -82,7 +80,6 @@
 }
 
 .repayHas-money {
-  font-weight: bold;
   height: .85rem;
   line-height: .85rem;
   font-size: .6rem;
@@ -90,6 +87,7 @@
 
 .repayHas-money-unit {
   font-size: .36rem;
+  margin-left: -.1rem;
 }
 
 .repayHas-btn {

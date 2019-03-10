@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>支付页</title>
+  <link rel="stylesheet" href="../../public/css/index.css" />
+  <link rel="stylesheet" href="./css/pay.css" />
+  <link rel="stylesheet" type="text/css" href="../../public/css/select.css">
+
+  <script src="../../public/js/adaption.js"></script>
+</head>
+
+<!-- TODO
+ *
+ * 注释部分为相同页面的不同可能性
+ *
+ * -->
+
+<body>
+  <section class="pay">
+    <section class="pay-content">
+      <header class="pay-content-header">
+        <p class="title">应还金额</p>
+        <p class="money"><span class="unit">￥</span>1000.70</p>
+        <!-- <p class="money color_warning">
+            <span class="unit color_warning">￥</span>1000.70
+          </p> -->
+        <ul class="det">
+          <li class="item">
+            <p class="name">应还本金</p>
+            <p class="val"><span class="unit">￥</span>1000.00</p>
+          </li>
+          <li class="item">
+            <p class="name">应还利息</p>
+            <p class="val"><span class="unit">￥</span>7.00</p>
+          </li>
+          <li class="item">
+            <p class="name">应还罚息</p>
+            <p class="val"><span class="unit">￥</span>0.00</p>
+          </li>
+        </ul>
+      </header>
+      <ul class="pay-content-list">
+        <li class="item checkHas">
+          <img class="icon" src="./img/repayment01.png" />
+          <span class="title">全额还款</span>
+          <span class="tips">推荐</span>
+          <img class="check" style="opacity: 1;" src="./img/check.png" />
+          <img class="checkNo" style="opacity: 0;" src="./img/checkNo.png" />
+        </li>
+        <li class="item checkHas">
+          <img class="icon" src="./img/repayment04.png" />
+          <span class="title">借款展期</span>
+          <img class="check" src="./img/check.png" />
+          <img class="checkNo" src="./img/checkNo.png" />
+        </li>
+        <li class="item">
+          <img class="icon" src="./img/repayment02.png" />
+          <span class="title">还款减免</span>
+          <div class="redu"><span class="unit">-￥</span>30.00</div>
+        </li>
+        <!-- <li class="item paySome">
+          <img class="icon" src="./img/repayment03.png" />
+          <span class="title">部分还款</span>
+          <img class="right" src="./img/right.png" />
+        </li> -->
+      </ul>
+    </section>
+    <footer class="pay-footer">
+      按时/提前还款不仅能够提升您的信用记录及信用额度，且能够获还款奖励或减免，逾期或失信不仅损害您的个人征信，还会产生罚息、违约金，并取消相关奖励，请您珍惜重视您的信用。
+    </footer>
+    <!-- <footer class="pay-footer">
+      为避免影响您的个人征信以及给您造成不必要的负面影响，请立即处理您的账单！
+    </footer> -->
+    <section class="pay-sum">
+      <div class="money">
+        <span class="unit">共计:</span>
+        <b class="unit">￥</b>
+        <b>997.00</b>
+        <!-- <b class="unit color_warning">￥</b>
+        <b class="color_warning">1147.00</b> -->
+      </div>
+      <div class="btn">确认还款</div>
+    </section>
+    <section class="pay-mask"></section>
+    <section class="pay-select">
+      <img class="pay-select-close" src="./img/close.png">
+      <p class="pay-select-title">确认还款</p>
+      <p class="pay-select-money color_warning"><span class="unit">￥</span>1000.70</p>
+      <ul class="pay-select-list">
+        <li class="item pay-select-unionpay">
+          <img style="height: .44rem;width: .78rem;" src="./img/unionpay.png" />
+          <span class="title">银联快捷</span>
+          <img class="right" src="./img/right.png" />
+        </li>
+        <li class="item pay-select-checkHas">
+          <img class="icon" src="./img/alipay.png" />
+          <span class="title">支付宝</span>
+          <img class="is" style="opacity: 1;" src="./img/true.png" />
+        </li>
+        <li class="item pay-select-checkHas">
+          <img class="icon" src="./img/weix.png" />
+          <span class="title">微信</span>
+          <img class="is" src="./img/true.png" />
+        </li>
+      </ul>
+      <p class="pay-select-btn">立即还款</p>
+    </section>
+    <section class="pay-bank-select">
+      <img class="pay-bank-left" src="./img/left.png">
+      <p class="pay-bank-title">选择还款银行</p>
+      <ul class="pay-bank-list">
+        <li class="item pay-bank-checkHas">
+          <img class="icon" src="./img/bank01.png" />
+          <span class="title">中国银行(1904)</span>
+          <img class="is" src="./img/true.png" />
+        </li>
+        <li class="item pay-bank-checkHas">
+          <img class="icon" src="./img/bank02.png" />
+          <span class="title">招商银行(1698)</span>
+          <img class="is" style="opacity: 1;" src="./img/true.png" />
+        </li>
+        <li class="item pay-bank-checkHas">
+          <img class="icon" src="./img/bank01.png" />
+          <span class="title">中国银行(1904)</span>
+          <img class="is" src="./img/true.png" />
+        </li>
+        <li class="item pay-bank-checkHas">
+          <img class="icon" src="./img/bank01.png" />
+          <span class="title">中国银行(1904)</span>
+          <img class="is" src="./img/true.png" />
+        </li>
+        <li class="item pay-bank-checkHas">
+          <img class="icon" src="./img/bank01.png" />
+          <span class="title">中国银行(1904)</span>
+          <img class="is" src="./img/true.png" />
+        </li>
+        <li class="item pay-bank-new">
+          <img class="icon" src="./img/idCard.png" />
+          <span class="title">使用新卡还款</span>
+          <img class="right" src="./img/right.png" />
+        </li>
+      </ul>
+      <p class="pay-bank-btn">立即还款</p>
+    </section>
+    <section class="pay-pass">
+      <img class="pay-pass-left" src="./img/left.png">
+      <p class="pay-pass-title">请输入交易密码</p>
+      <p class="pay-pass-money color_warning"><span class="unit">￥</span>1000.70</p>
+      <ul class="pay-pass-list">
+        <li class="item"><span class="cir"></span></li>
+        <li class="item"><span class="cir"></span></li>
+        <li class="item"><span class="cir"></span></li>
+        <li class="item"><span class="cir"></span></li>
+        <li class="item"><span class="cir"></span></li>
+        <li class="item"><span class="cir"></span></li>
+      </ul>
+      <p class="pay-pass-forget">忘记密码？</p>
+      <ul class="pay-pass-number">
+        <li class="val number">1</li>
+        <li class="val number">2</li>
+        <li class="val number bor-right-none">3</li>
+        <li class="val number">4</li>
+        <li class="val number">5</li>
+        <li class="val number bor-right-none">6</li>
+        <li class="val number">7</li>
+        <li class="val number">8</li>
+        <li class="val number bor-right-none">9</li>
+        <li class="val bgColor_hui"></li>
+        <li class="val number">0</li>
+        <li class="val bgColor_hui bor-right-none backspace">
+          <img src="./img/backspace.png">
+        </li>
+      </ul>
+    </section>
+    <section class="pay-selectSome"></section>
+  </section>
+</body>
+<script src="../../public/js/jquery-2.1.1.min.js"></script>
+<script src="../../public/js/select.min.js"></script>
+<script>
+  (function ($) {
+    // 选择还款方式
+    $('.checkHas').click(function () {
+      var $check = $(this).find('.check')
+      var $checkNo = $(this).find('.checkNo')
+      if ($check.css('opacity') === '0') {
+        $('.checkHas .check').css('opacity', 0)
+        $('.checkHas .checkNo').css('opacity', 1)
+        $checkNo.css('opacity', 0)
+        $check.css('opacity', 1)
+      }
+    })
+    // 部分还款
+    new MobileSelect({
+      trigger: '.pay-selectSome',
+      title: '选择金额',
+      wheels: [{
+        data: ['3667.00', '3600.00', '3500.00', '3400.00', '3300.00']
+      }],
+      position: [2],
+      callback: function (indexArr, data) {
+        // do something...
+        console.log(data[0])
+      }
+    })
+    $('.paySome').click(function () {
+      $('.pay-selectSome').click()
+    })
+    // 确认还款
+    $('.pay-sum .btn').click(function () {
+      $('.pay-mask').show()
+      $('.pay-select').css('transform', 'translate3d(0, 0, 0)')
+    })
+    // 选择支付方式
+    $('.pay-select-checkHas').click(function () {
+      var $is = $(this).find('.is')
+      if ($is.css('opacity') === '0') {
+        $('.pay-select-checkHas .is').css('opacity', 0)
+        $is.css('opacity', 1)
+      }
+    })
+    // 银联快捷 - 点击
+    $('.pay-select-unionpay').click(function () {
+      $('.pay-select').css('transform', 'translate3d(-100%, 0, 0)')
+      $('.pay-bank-select').css('transform', 'translate3d(0, 0, 0)')
+    })
+    // 银联快捷 - 点击回退
+    $('.pay-bank-left').click(function () {
+      $('.pay-select').css('transform', 'translate3d(0, 0, 0)')
+      $('.pay-bank-select').css('transform', 'translate3d(100%, 0, 0)')
+    })
+    // 银联快捷选择支付方式
+    $('.pay-bank-checkHas').click(function () {
+      var $is = $(this).find('.is')
+      if ($is.css('opacity') === '0') {
+        $('.pay-bank-checkHas .is').css('opacity', 0)
+        $is.css('opacity', 1)
+      }
+    })
+    // 使用新卡还款
+    $('.pay-bank-new').click(function () {
+      // do something...
+    })
+    // 关闭支付方式
+    $('.pay-select-close').click(function () {
+      $('.pay-select').css('transform', 'translate3d(0, 100%, 0)')
+      $('.pay-mask').hide()
+    })
+    // 立即还款
+    $('.pay-bank-btn,.pay-select-btn').click(function () {
+      $('.pay-pass').css('transform', 'translate3d(0, 0, 0)')
+    })
+    // 忘记密码
+    $('.pay-pass-forget').click(function () {
+      // do something...
+    })
+    var pass = ''
+    // 密码输入
+    $('.pay-pass-number .number').click(function () {
+      var val = $(this).text()
+      var $cir = $('.pay-pass-list .cir')
+      if (val.length === 6) {
+        return
+      }
+      pass += val
+      $cir.css('opacity', 0)
+      for (var i = 0; i < pass.length; i++) {
+        $($cir[i]).css('opacity', 1)
+      }
+      if (pass.length === 6) {
+        // do something...
+        console.log(pass)
+      }
+    })
+    // 密码退格
+    $('.pay-pass-number .backspace').click(function () {
+      var $cir = $('.pay-pass-list .cir')
+      if (!pass) {
+        return
+      }
+      pass = pass.substring(0, pass.length - 1)
+      $cir.css('opacity', 0)
+      for (var i = 0; i < pass.length; i++) {
+        $($cir[i]).css('opacity', 1)
+      }
+    })
+    // 密码 - 点击回退
+    $('.pay-pass-left').click(function () {
+      $('.pay-pass').css('transform', 'translate3d(0, 100%, 0)')
+    })
+  })($)
+</script>
+
+</html>
