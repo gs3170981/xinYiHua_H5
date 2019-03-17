@@ -1,0 +1,50 @@
+.myNews {
+  padding: .3rem 0;
+}
+
+.myNews-page {
+  width: 7.05rem;
+  background: white;
+  margin: 0 auto .24rem;
+}
+
+.myNews-page-header {
+  padding: .26rem;
+  height: .72rem;
+  line-height: .72rem;
+}
+
+.myNews-page-header .icon {
+  height: .72rem;
+  width: .72rem;
+  float: left;
+}
+
+.myNews-page-header .title {
+  margin-left: .24rem;
+  float: left;
+  font-size: .32rem;
+  font-weight: bold;
+}
+
+.myNews-page-header .timer {
+  float: right;
+  color: rgb(151, 152, 153);
+  font-size: .24rem;
+}
+
+.myNews-page-det {
+  padding: .1rem .26rem .5rem;
+  font-size: .28rem;
+  line-height: .52rem;
+  color: rgb(49, 50, 51);
+  border-bottom: 1px dashed #e3e4e6;
+}
+
+.myNews-page-footer {
+  color: rgb(151, 152, 153);
+  font-size: .26rem;
+  height: .8rem;
+  line-height: .8rem;
+  padding: 0 .26rem;
+}
