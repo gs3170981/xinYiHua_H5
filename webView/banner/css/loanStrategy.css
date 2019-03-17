@@ -1,0 +1,43 @@
+.loanStrategy {
+  background: linear-gradient(to top, rgb(24, 182, 255), rgb(23, 94, 255));
+  padding-bottom: .65rem;
+  color: rgb(49, 50, 51);
+  font-size: .26rem;
+  line-height: .48rem;
+}
+
+.loanStrategy-header {
+  height: 6.1rem;
+  width: 100%;
+}
+
+.loanStrategy-page {
+  margin: 0 auto .24rem;
+  width: 6.9rem;
+  border-radius: .16rem;
+  background: white;
+}
+
+.loanStrategy-page-title-bg {
+  background: linear-gradient(to top, rgb(255, 255, 255), rgb(191, 231, 254));
+  border-radius: .16rem .16rem 0 0;
+}
+
+.loanStrategy-page-title {
+  height: .4rem;
+  margin: 0 auto .65rem;
+  display: block;
+  padding-top: .37rem;
+}
+
+.loanStrategy-page-content {
+  padding: 0 .5rem .65rem;
+}
+
+.loanStrategy-bottom {
+  font-size: .11rem;
+  color: white;
+  margin-top: .55rem;
+  text-align: center;
+  width: 100%;
+}

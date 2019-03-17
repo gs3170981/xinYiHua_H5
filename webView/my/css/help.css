@@ -1,0 +1,67 @@
+.myHelp {
+  background: linear-gradient(to top, rgb(24, 182, 255), rgb(23, 94, 255));
+  padding-bottom: .65rem;
+  color: rgb(49, 50, 51);
+  font-size: .26rem;
+  line-height: .48rem;
+}
+
+.myHelp-header {
+  height: 6.1rem;
+  width: 100%;
+}
+
+.myHelp-page {
+  margin: 0 auto .24rem;
+  width: 6.9rem;
+  border-radius: .16rem;
+  background: white;
+}
+
+.myHelp-page-title-bg {
+  background: linear-gradient(to top, rgb(255, 255, 255), rgb(191, 231, 254));
+  border-radius: .16rem .16rem 0 0;
+}
+
+.myHelp-page-title {
+  height: .4rem;
+  margin: 0 auto .65rem;
+  display: block;
+  padding-top: .37rem;
+}
+
+.myHelp-page-content {
+  padding: 0 .5rem .65rem;
+}
+
+.myHelp-page-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 .5rem .65rem;
+  font-size: .28rem;
+}
+
+.myHelp-page-list .item {
+  text-align: center;
+}
+
+.myHelp-page-list .item .icon {
+  width: .96rem;
+  height: .96rem;
+  display: block;
+  margin: 0 auto;
+}
+
+.myHelp-page-list .item .name {
+  margin-top: .2rem;
+  font-weight: 700;
+}
+
+.myHelp-page-list .item .i {
+  width: .16rem;
+  height: .15rem;
+  display: block;
+  padding-bottom: .55rem;
+  margin: 0 auto;
+}
