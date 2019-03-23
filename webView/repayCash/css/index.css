@@ -1,0 +1,142 @@
+html {
+  background: white;
+}
+
+.repayCash {
+  padding-bottom: 1rem;
+  color: rgb(49, 50, 51);
+}
+
+.repayCash-header {
+  margin: .18rem auto;
+  width: 6.9rem;
+  height: 3rem;
+  display: block;
+  border-radius: .1rem;
+}
+
+.repayCash-no {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+  margin-top: 1.8rem;
+}
+
+.repayCash-no-icon {
+  width: 3.06rem;
+  height: 2.2rem;
+}
+
+.repayCash-no-title {
+  margin-top: .4rem;
+  font-size: .3rem;
+}
+
+.repayCash-footer {
+  position: fixed;
+  bottom: .4rem;
+  color: rgb(202, 203, 204);
+  font-size: .22rem;
+  z-index: -1;
+  margin-top: .2rem;
+  width: 100%;
+  text-align: center;
+}
+
+.repayCash-has {
+  margin-top: .55rem;
+  background: white;
+}
+
+.repayCash-has-title {
+  height: .4rem;
+  line-height: .4rem;
+  font-size: .32rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: .5rem;
+}
+
+.repayCash-has-tips {
+  margin: 0 .22rem 0 .17rem;
+  font-size: .1rem;
+  color: #ffbe1e;
+}
+
+.repayCash-has-list {
+  width: 6.6rem;
+  margin: 0 auto;
+}
+
+.repayCash-has-list .item {
+  margin-top: .46rem;
+  height: 1.6rem;
+  position: relative;
+}
+
+.repayCash-has-list .item .cir {
+  background: rgb(255, 196, 51);
+  height: .28rem;
+  width: .28rem;
+  border-radius: 50%;
+  float: left;
+  margin-top: .25rem;
+}
+
+.repayCash-has-list .item .cir:before,
+.repayCash-has-list .item .cir:after {
+  content: '';
+  position: absolute;
+  width: 1px;
+  background: rgba(255, 196, 51, .6);
+  top: 0;
+  left: .13rem;
+}
+
+.repayCash-has-list .item .cir:before {
+  height: .25rem;
+}
+
+.repayCash-has-list .item:first-child .cir:before {
+  height: 0;
+}
+
+.repayCash-has-list .item .cir:after {
+  height: 1.53rem;
+  top: .53rem;
+}
+
+.repayCash-has-list .item:last-child .cir:after {
+  height: 0;
+}
+
+.repayCash-has-list .item .det {
+  position: relative;
+  padding: .3rem;
+  width: 5.9rem;
+  float: right;
+  background: rgb(247, 249, 252);
+  box-sizing: border-box;
+  height: 100%;
+  border-radius: .05rem;
+}
+
+.repayCash-has-list .item .det .timer {
+  color: rgb(151, 152, 153);
+  font-size: .28rem;
+}
+
+.repayCash-has-list .item .det .tips {
+  margin-top: .25rem;
+  font-size: .3rem;
+}
+
+.repayCash-has-list .item .det .money {
+  position: absolute;
+  right: .4rem;
+  bottom: .3rem;
+  font-weight: 700;
+  font-size: .46rem;
+}
