@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>提现</title>
+  <link rel="stylesheet" href="../../public/css/index.css">
+  <link rel="stylesheet" href="./css/cashWithdrawal.css">
+  <script src="../../public/js/adaption.js"></script>
+</head>
+
+<body>
+  <div class="cashWithdrawal">
+    <header class="cashWithdrawal-bank">
+      <img class="cashWithdrawal-bank-icon" src="./img/wallet_bank_gs@2x.png">
+      <span class="cashWithdrawal-bank-title">工商银行（0581）</span>
+      <img class="cashWithdrawal-bank-more" src="./img/wallet_icon_next@2x.png">
+    </header>
+    <section class="cashWithdrawal-content">
+      <p class="cashWithdrawal-content-title">提现金额(收取10%手续费)</p>
+      <p class="cashWithdrawal-content-money">
+        <span class="unit">￥</span>
+        <span class="val"></span>
+        <img class="close" src="./img/wallet_icon_close@2x.png">
+      </p>
+      <p class="cashWithdrawal-content-tips">
+        <span class="label-no active">可提金额<span class="moneyAll">520.00</span>元</span>
+        <span class="label-has"></span>
+        <span class="label-error">当前输入金额已超过可提现的最大金额</span>
+        <span class="btn active">全部提现</span>
+      </p>
+    </section>
+    <p class="cashWithdrawal-btn">预计两小时内到账，确认提现</p>
+    <footer class="cashWithdrawal-inputNumber">
+      <ul class="list">
+        <li class="item">1</li>
+        <li class="item">2</li>
+        <li class="item">3</li>
+        <li class="item">4</li>
+        <li class="item">5</li>
+        <li class="item">6</li>
+        <li class="item">7</li>
+        <li class="item">8</li>
+        <li class="item">9</li>
+        <li class="item">.</li>
+        <li class="item">0</li>
+        <li class="item-down">
+          <img class="icon" src="./img/keyDown.png">
+        </li>
+      </ul>
+      <ul class="btnList">
+        <li class="item">
+          <img class="backspace" src="./img/backspace.png">
+        </li>
+        <li class="item success-btn">确定</li>
+      </ul>
+    </footer>
+    <section class="cashWithdrawal-mask"></section>
+
+    <section class="cashWithdrawal-pass">
+      <img class="cashWithdrawal-pass-left" src="./img/left.png">
+      <p class="cashWithdrawal-pass-title">请输入交易密码</p>
+      <p class="cashWithdrawal-pass-money color_warning"><span class="unit">￥</span>1000.70</p>
+      <ul class="cashWithdrawal-pass-list">
+        <li class="item"><span class="cir"></span></li>
+        <li class="item"><span class="cir"></span></li>
+        <li class="item"><span class="cir"></span></li>
+        <li class="item"><span class="cir"></span></li>
+        <li class="item"><span class="cir"></span></li>
+        <li class="item"><span class="cir"></span></li>
+      </ul>
+      <p class="cashWithdrawal-pass-forget">忘记密码？</p>
+      <ul class="cashWithdrawal-pass-number">
+        <li class="val number">1</li>
+        <li class="val number">2</li>
+        <li class="val number bor-right-none">3</li>
+        <li class="val number">4</li>
+        <li class="val number">5</li>
+        <li class="val number bor-right-none">6</li>
+        <li class="val number">7</li>
+        <li class="val number">8</li>
+        <li class="val number bor-right-none">9</li>
+        <li class="val bgColor_hui"></li>
+        <li class="val number">0</li>
+        <li class="val bgColor_hui bor-right-none backspace">
+          <img src="./img/backspace_s.png">
+        </li>
+      </ul>
+    </section>
+  </div>
+
+</body>
+<script src="../../public/js/jquery-2.1.1.min.js"></script>
+<script>
+  (function ($) {
+    // 选择bank
+    $('.cashWithdrawal-bank-more').click(function () {
+      // dom something...
+    })
+    // 点击money跳出money输入面板
+    $('.cashWithdrawal-content-money').click(function () {
+      !$('.cashWithdrawal-inputNumber').hasClass('active') &&
+        $('.cashWithdrawal-inputNumber').addClass('active')
+    })
+    // money输入面板返回
+    $('.cashWithdrawal-inputNumber .list .item-down, .cashWithdrawal-inputNumber .btnList .success-btn').click(
+      function () {
+        $('.cashWithdrawal-inputNumber').removeClass('active')
+      })
+    // money输入
+    $('.cashWithdrawal-inputNumber .list .item').click(function () {
+      let val = $('.cashWithdrawal-content-money .val').text()
+      let moneyAll = +$('.cashWithdrawal-content-tips .moneyAll').text()
+      let _thisVal = $(this).text()
+      // 禁止多个"."同时存在
+      if (_thisVal === '.' && ~val.indexOf('.')) {
+        return
+      }
+      // 禁止第一值为.
+      if (_thisVal === '.' && val === '') {
+        return
+      }
+      // 禁止第一值为0
+      if (_thisVal === '0' && val === '') {
+        return
+      }
+      val += _thisVal;
+      if (!$('.cashWithdrawal-content-money .close').hasClass('active')) {
+        $('.cashWithdrawal-content-money .close').addClass('active')
+        $('.cashWithdrawal-content-tips .label-has').addClass('active')
+        $('.cashWithdrawal-content-tips .label-no').removeClass('active')
+        $('.cashWithdrawal-btn').addClass('active')
+      }
+      $('.cashWithdrawal-content-money .val').text(val)
+      // 10%手续费(四舍五入)
+      $('.cashWithdrawal-content-tips .label-has').text('手续费' + parseFloat(val * 0.1).toFixed(2) + '元')
+      if (+val > moneyAll) {
+        $('.cashWithdrawal-content-tips .label-has, .cashWithdrawal-content-tips .label-no').removeClass('active')
+        $('.cashWithdrawal-content-tips .label-error').addClass('active')
+        $('.cashWithdrawal-btn').removeClass('active')
+      }
+    })
+    // money退格
+    $('.cashWithdrawal-inputNumber .backspace').click(function () {
+      let moneyAll = +$('.cashWithdrawal-content-tips .moneyAll').text()
+      let val = $('.cashWithdrawal-content-money .val').text()
+      val = val.substring(0, val.length - 1)
+      if (+val <= moneyAll) {
+        $('.cashWithdrawal-content-tips .label-error').hasClass('active') &&
+          $('.cashWithdrawal-btn').addClass('active')
+        $('.cashWithdrawal-content-tips .label-has').addClass('active')
+        $('.cashWithdrawal-content-tips .label-error').removeClass('active')
+      }
+      if (val === '') {
+        $('.cashWithdrawal-content-money .close').removeClass('active')
+        $('.cashWithdrawal-content-tips .label-has').removeClass('active')
+        $('.cashWithdrawal-content-tips .label-no').addClass('active')
+        $('.cashWithdrawal-btn').removeClass('active')
+      }
+      $('.cashWithdrawal-content-money .val').text(val)
+      // 10%手续费(四舍五入)
+      $('.cashWithdrawal-content-tips .label-has').text('手续费' + parseFloat(val * 0.1).toFixed(2) + '元')
+    })
+    // money清空btn
+    $('.cashWithdrawal-content-money .close').click(function () {
+      if (!$(this).hasClass('active')) {
+        return
+      }
+      $('.cashWithdrawal-btn').removeClass('active')
+      $('.cashWithdrawal-content-money .val').text('')
+      $(this).removeClass('active')
+      $('.cashWithdrawal-content-tips .label-has, .cashWithdrawal-content-tips .label-error').removeClass(
+        'active')
+      $('.cashWithdrawal-content-tips .label-no').addClass('active')
+    })
+    // 全部提现
+    $('.cashWithdrawal-content-tips .btn').click(function () {
+      let val = $('.cashWithdrawal-content-tips .moneyAll').text()
+      if (!$(this).hasClass('active')) {
+        return
+      }
+      $('.cashWithdrawal-btn').addClass('active')
+      $('.cashWithdrawal-content-money .val').text(val)
+      $('.cashWithdrawal-content-tips .label-has').addClass('active').text('手续费' + parseFloat(val * 0.1).toFixed(
+        2) + '元')
+      $('.cashWithdrawal-content-money .close').addClass('active')
+      $('.cashWithdrawal-content-tips .label-no, .cashWithdrawal-content-tips .label-error').removeClass('active')
+    })
+    // 确认提现btn
+    $('.cashWithdrawal-btn').click(function () {
+      if (!$(this).hasClass('active')) {
+        return
+      }
+      $('.cashWithdrawal-pass').addClass('active')
+      $('.cashWithdrawal-mask').show()
+    })
+    // 密码 - 返回
+    $('.cashWithdrawal-pass-left').click(function () {
+      $('.cashWithdrawal-pass').removeClass('active')
+      $('.cashWithdrawal-mask').hide()
+      pass = ''
+      $('.cashWithdrawal-pass-list .cir').css('opacity', 0)
+    })
+    // 密码 - 忘记
+    $('.cashWithdrawal-pass-forget').click(function () {
+      // do something...
+    })
+    var pass = ''
+    // 密码 - 输入
+    $('.cashWithdrawal-pass-number .number').click(function () {
+      var val = $(this).text()
+      var $cir = $('.cashWithdrawal-pass-list .cir')
+      if (pass.length === 6) {
+        return
+      }
+      pass += val
+      $cir.css('opacity', 0)
+      for (var i = 0; i < pass.length; i++) {
+        $($cir[i]).css('opacity', 1)
+      }
+      $('.cashWithdrawal-pass-list').hasClass('active') && $('.cashWithdrawal-pass-list').removeClass('active')
+      if (pass.length === 6) {
+        // do something...
+        console.log(pass)
+
+        // 密码输错执行的JS - 可取消注释查看效果
+        // $('.cashWithdrawal-pass-list').addClass('active')
+        // pass = ''
+        // $('.cashWithdrawal-pass-list .cir').css('opacity', 0)
+      }
+    })
+    // 密码 - 退格
+    $('.cashWithdrawal-pass-number .backspace').click(function () {
+      var $cir = $('.cashWithdrawal-pass-list .cir')
+      if (!pass) {
+        return
+      }
+      pass = pass.substring(0, pass.length - 1)
+      $cir.css('opacity', 0)
+      for (var i = 0; i < pass.length; i++) {
+        $($cir[i]).css('opacity', 1)
+      }
+    })
+  })($)
+</script>
+
+</html>

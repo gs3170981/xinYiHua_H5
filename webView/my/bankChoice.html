@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>选择银行卡</title>
+  <link rel="stylesheet" href="../../public/css/index.css">
+  <link rel="stylesheet" href="./css/bankChoice.css">
+  <script src="../../public/js/adaption.js"></script>
+</head>
+
+<body>
+  <div class="bankChoice">
+    <ul class="bankChoice-list">
+      <li class="bankChoice-list-item active">
+        <img class="icon" src="./img/wallet_bank_gs@2x.png">
+        <span class="title">工商银行（0581）</span>
+        <img class="select" src="./img/wallet_icon_choose@2x.png">
+      </li>
+      <li class="bankChoice-list-item">
+        <img class="icon" src="./img/wallet_bank_zs@2x.png">
+        <span class="title">招商银行（1689）</span>
+        <img class="select" src="./img/wallet_icon_choose@2x.png">
+      </li>
+      <li class="bankChoice-list-item">
+        <img class="icon" src="./img/wallet_bank_pf@2x.png">
+        <span class="title">浦发银行（6378）</span>
+        <img class="select" src="./img/wallet_icon_choose@2x.png">
+      </li>
+    </ul>
+    <p class="bankChoice-btn">重新绑定收款银行卡</p>
+  </div>
+
+</body>
+<script src="../../public/js/jquery-2.1.1.min.js"></script>
+<script>
+  (function ($) {
+    // 银行卡点击事件
+    $('.bankChoice-list-item').click(function () {
+      $('.bankChoice-list-item').removeClass('active')
+      $(this).addClass('active')
+      // do something...
+    })
+    // 重绑点击事件
+    $('.bankChoice-btn').click(function () {
+      // do something...
+    })
+  })($)
+</script>
+
+</html>

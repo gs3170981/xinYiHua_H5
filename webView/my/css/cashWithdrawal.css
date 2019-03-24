@@ -1,0 +1,348 @@
+.cashWithdrawal {
+  color: rgb(49, 50, 51);
+  font-size: .28rem;
+}
+
+.cashWithdrawal-bank {
+  margin-top: .2rem;
+  background: white;
+  height: 1rem;
+  line-height: 1rem;
+  padding: 0 .3rem;
+  display: flex;
+  align-items: center;
+}
+
+.cashWithdrawal-bank-icon {
+  height: .6rem;
+  width: .6rem;
+}
+
+.cashWithdrawal-bank-title {
+  margin-left: .2rem;
+  font-size: .3rem;
+}
+
+.cashWithdrawal-bank-more {
+  height: .22rem;
+  width: .12rem;
+  padding: .2rem 0 .2rem 1rem;
+  margin-left: auto;
+}
+
+
+.cashWithdrawal-content {
+  margin-top: .2rem;
+  padding: 0 .3rem;
+  background: white;
+}
+
+.cashWithdrawal-content-title {
+  height: 1rem;
+  line-height: 1rem;
+  color: rgb(98, 99, 100);
+}
+
+.cashWithdrawal-content-money {
+  height: 1rem;
+  line-height: 1rem;
+  border-bottom: 1px solid rgb(242, 244, 245);
+  font-weight: 700;
+  padding-bottom: .2rem;
+  overflow: hidden;
+}
+
+.cashWithdrawal-content-money .unit {
+  font-size: .54rem;
+  float: left;
+  line-height: 1.2rem;
+}
+
+.cashWithdrawal-content-money .val {
+  color: rgb(24, 25, 26);
+  font-size: .82rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  float: left;
+  white-space: nowrap;
+  width: 5.9rem;
+}
+
+.cashWithdrawal-content-money .close {
+  float: right;
+  margin-top: .3rem;
+  width: .3rem;
+  opacity: 0;
+  height: .3rem;
+}
+
+.cashWithdrawal-content-money .close.active {
+  opacity: 1;
+}
+
+.cashWithdrawal-content-tips {
+  height: .9rem;
+  line-height: .9rem;
+  display: flex;
+  position: relative;
+  align-items: center;
+}
+
+.cashWithdrawal-content-tips .label-has,
+.cashWithdrawal-content-tips .label-no,
+.cashWithdrawal-content-tips .label-error {
+  color: rgb(151, 152, 153);
+  position: absolute;
+  left: 0;
+  top: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 5rem;
+  opacity: 0;
+}
+
+.cashWithdrawal-content-tips .label-has.active,
+.cashWithdrawal-content-tips .label-error.active,
+.cashWithdrawal-content-tips .label-no.active {
+  opacity: 1;
+}
+
+.cashWithdrawal-content-tips .label-error {
+  color: rgb(253, 95, 9);
+}
+
+.cashWithdrawal-content-tips .btn {
+  height: .5rem;
+  width: 1.5rem;
+  background: rgb(253, 183, 12);
+  line-height: .5rem;
+  color: white;
+  font-size: .26rem;
+  text-align: center;
+  margin-left: auto;
+  border-radius: .25rem;
+  opacity: 0;
+}
+
+.cashWithdrawal-content-tips .btn.active {
+  opacity: 1;
+}
+
+.cashWithdrawal-btn {
+  width: 6.2rem;
+  height: .9rem;
+  font-size: .34rem;
+  background: linear-gradient(to top, rgb(11, 148, 255), rgb(29, 194, 255));
+  color: white;
+  border-radius: .45rem;
+  line-height: .9rem;
+  text-align: center;
+  margin: .9rem auto 0;
+  opacity: .4;
+}
+
+.cashWithdrawal-btn.active {
+  opacity: 1;
+}
+
+.cashWithdrawal-inputNumber {
+  transition: all .3s ease;
+  border-top: 1px solid rgb(222, 223, 224);
+  width: 100%;
+  height: 4rem;
+  position: fixed;
+  text-align: center;
+  left: 0;
+  bottom: 0;
+  overflow: hidden;
+  transform: translate3d(0, 100%, 0);
+  z-index: 1;
+}
+
+.cashWithdrawal-inputNumber.active {
+  transform: translate3d(0, 0, 0);
+}
+
+.cashWithdrawal-inputNumber .list {
+  width: 5.57rem;
+  height: 100%;
+  font-size: .52rem;
+  color: black;
+  float: left;
+}
+
+.cashWithdrawal-inputNumber .list .item,
+.cashWithdrawal-inputNumber .list .item-down {
+  height: 1rem;
+  float: left;
+  box-sizing: border-box;
+  line-height: 1rem;
+  border-right: 1px solid rgb(222, 223, 224);
+  border-bottom: 1px solid rgb(222, 223, 224);
+  width: 1.85rem;
+}
+
+.cashWithdrawal-inputNumber .list .icon {
+  height: .55rem;
+  width: .55rem;
+  margin-top: .2rem;
+}
+
+.cashWithdrawal-inputNumber .btnList {
+  overflow: hidden;
+  height: 100%;
+}
+
+.cashWithdrawal-inputNumber .btnList .item {
+  height: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cashWithdrawal-inputNumber .btnList .item .backspace {
+  width: .55rem;
+  height: .55rem;
+}
+
+.cashWithdrawal-inputNumber .btnList .item.success-btn {
+  background: rgb(25, 140, 255);
+  font-size: .42rem;
+  color: white;
+}
+
+.cashWithdrawal-pass {
+  position: fixed;
+  transform: translate3d(0, 100%, 0);
+  z-index: 1;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  height: 7rem;
+  background: white;
+  transition: all .3s ease;
+}
+
+.cashWithdrawal-pass-left {
+  position: absolute;
+  left: .32rem;
+  padding: 0 .5rem .5rem 0;
+  top: .38rem;
+  width: .16rem;
+  height: .3rem;
+}
+
+.cashWithdrawal-pass-title {
+  font-size: .32rem;
+  height: .35rem;
+  line-height: .35rem;
+  margin-top: .35rem;
+  text-align: center;
+}
+
+.cashWithdrawal-pass-money {
+  font-size: .56rem;
+  margin: .4rem auto .1rem;
+  text-align: center;
+}
+
+.cashWithdrawal-pass-money .unit {
+  font-size: .32rem;
+  margin-left: -.1rem;
+}
+
+.cashWithdrawal-pass {
+  transform: translate3d(0, 100%, 0);
+  z-index: 2;
+  height: 8.8rem;
+}
+
+.cashWithdrawal-pass.active {
+  transform: translate3d(0, 0, 0);
+}
+
+.cashWithdrawal-pass-list {
+  margin: .5rem auto .3rem;
+  width: 6.84rem;
+  border: 1px solid rgb(202, 203, 204);
+  border-radius: .05rem;
+  overflow: hidden;
+  height: .94rem;
+}
+
+.cashWithdrawal-pass-list.active {
+  border-color: rgb(253, 95, 9);
+}
+
+.cashWithdrawal-pass-list.active .item {
+  border-color: rgb(253, 95, 9);
+}
+
+.cashWithdrawal-pass-list .item {
+  width: 1.12rem;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  float: left;
+  border-right: 1px solid rgb(202, 203, 204);
+}
+
+.cashWithdrawal-pass-list .item:last-child {
+  border-right: none;
+}
+
+.cashWithdrawal-pass-list .item .cir {
+  height: .26rem;
+  width: .26rem;
+  border-radius: 50%;
+  background: black;
+  opacity: 0;
+}
+
+.cashWithdrawal-pass-forget {
+  font-size: .28rem;
+  color: rgb(23, 133, 255);
+  text-align: right;
+  margin-right: .2rem;
+}
+
+.cashWithdrawal-pass-number {
+  height: 4.44rem;
+  position: absolute;
+  bottom: 0;
+  overflow: hidden;
+  right: 0;
+}
+
+.cashWithdrawal-pass-number .val {
+  border-right: 1px solid #8c8c8c;
+  float: left;
+  width: 2.485rem;
+  height: 1.1rem;
+  font-size: .56rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid #8c8c8c;
+}
+
+.cashWithdrawal-pass-number .bor-right-none {
+  border-right: none;
+}
+
+.cashWithdrawal-selectSome {
+  display: none;
+}
+
+.cashWithdrawal-mask {
+  position: absolute;
+  z-index: 1;
+  height: 100vh;
+  width: 100%;
+  top: 0;
+  left: 0;
+  display: none;
+  background: rgba(0, 0, 0, .35);
+}

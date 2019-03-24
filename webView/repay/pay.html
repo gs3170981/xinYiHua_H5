@@ -263,7 +263,7 @@
     $('.pay-pass-number .number').click(function () {
       var val = $(this).text()
       var $cir = $('.pay-pass-list .cir')
-      if (val.length === 6) {
+      if (pass.length === 6) {
         return
       }
       pass += val
@@ -271,9 +271,15 @@
       for (var i = 0; i < pass.length; i++) {
         $($cir[i]).css('opacity', 1)
       }
+      $('.pay-pass-list').hasClass('active') && $('.pay-pass-list').removeClass('active')
       if (pass.length === 6) {
         // do something...
         console.log(pass)
+
+        // 密码输错执行的JS - 可取消注释查看效果
+        // $('.pay-pass-list').addClass('active')
+        // pass = ''
+        // $('.pay-pass-list .cir').css('opacity', 0)
       }
     })
     // 密码退格
@@ -291,6 +297,8 @@
     // 密码 - 点击回退
     $('.pay-pass-left').click(function () {
       $('.pay-pass').css('transform', 'translate3d(0, 100%, 0)')
+      pass = ''
+      $('.pay-pass-list .cir').css('opacity', 0)
     })
   })($)
 </script>

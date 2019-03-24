@@ -203,6 +203,7 @@
 
 .pay-select-close {
   position: absolute;
+  padding: 0 .5rem .5rem 0;
   left: .32rem;
   top: .38rem;
   height: .28rem;
@@ -212,6 +213,7 @@
 .pay-bank-left,
 .pay-pass-left {
   position: absolute;
+  padding: 0 .5rem .5rem 0;
   left: .32rem;
   top: .38rem;
   width: .16rem;
@@ -335,6 +337,14 @@
   border-radius: 50%;
   background: black;
   opacity: 0;
+}
+
+.pay-pass-list.active {
+  border-color: rgb(253, 95, 9);
+}
+
+.pay-pass-list.active .item {
+  border-color: rgb(253, 95, 9);
 }
 
 .pay-pass-forget {
