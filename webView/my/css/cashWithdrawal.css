@@ -206,6 +206,8 @@
   height: .55rem;
 }
 
+
+
 .cashWithdrawal-inputNumber .btnList .item.success-btn {
   background: rgb(25, 140, 255);
   font-size: .42rem;
@@ -326,6 +328,11 @@
   justify-content: center;
   align-items: center;
   border-bottom: 1px solid #8c8c8c;
+}
+
+.cashWithdrawal-pass-number .val.backspace .icon {
+  height: .55rem;
+  width: .55rem;
 }
 
 .cashWithdrawal-pass-number .bor-right-none {
