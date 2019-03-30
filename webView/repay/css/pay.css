@@ -196,6 +196,7 @@
   height: 7rem;
   background: white;
   transition: all .3s ease;
+  -webkit-transition: all .3s ease;
 }
 
 .pay-select.active {
