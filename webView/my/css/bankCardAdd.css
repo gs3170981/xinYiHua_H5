@@ -1,0 +1,167 @@
+.bankCardAdd {
+  color: rgb(49, 50, 51);
+  font-size: .28rem;
+}
+
+.bankCardAdd-list {
+  margin-top: .2rem;
+  background: white;
+  padding: 0 .3rem;
+}
+
+.bankCardAdd-list .item {
+  height: .99rem;
+  border-bottom: 1px solid rgb(242, 244, 245);
+  display: flex;
+  align-items: center;
+}
+
+.bankCardAdd-list .item .title {
+  width: 1.4rem;
+}
+
+.bankCardAdd-list .item .input,
+.bankCardAdd-list .item .bank-select {
+  border: none;
+  width: 4.7rem;
+  padding-left: .2rem;
+  height: .6rem;
+  font-size: .28rem;
+}
+
+.bankCardAdd-list .item .bank-select {
+  line-height: .6rem;
+  color: rgb(197, 198, 199);
+}
+
+.bankCardAdd-list .item .input::-webkit-input-placeholder {
+  color: rgb(197, 198, 199);
+}
+
+.bankCardAdd-list .item .icon {
+  margin-left: auto;
+  width: .34rem;
+  height: .34rem;
+  padding: .1rem 0;
+}
+
+.bankCardAdd-list .item .icon-right {
+  margin-left: auto;
+  width: .12rem;
+  height: .22rem;
+  padding: .1rem 0;
+}
+
+.bankCardAdd-list .item .btn {
+  height: .48rem;
+  margin-left: auto;
+  line-height: .48rem;
+  padding: 0 .25rem;
+  font-size: .26rem;
+  color: rgb(41, 164, 255);
+  border: 1px solid rgb(41, 164, 255);
+  border-radius: .08rem;
+}
+
+.bankCardAdd-list .item .btn.active {
+  border-color: rgb(197, 198, 199);
+  color: rgb(197, 198, 199);
+}
+
+.bankCardAdd-btn {
+  width: 5.4rem;
+  background: linear-gradient(to top, rgb(11, 148, 255), rgb(29, 194, 255));
+  text-align: center;
+  height: .9rem;
+  color: white;
+  border-radius: .45rem;
+  line-height: .9rem;
+  font-size: .34rem;
+  margin: 1rem auto;
+}
+
+.bankCardAdd-mask {
+  position: absolute;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, .4);
+  visibility: hidden;
+  z-index: 1;
+}
+
+.bankCardAdd-mask.active {
+  visibility: visible;
+}
+
+.bankCardAdd-mask-nameTips,
+.bankCardAdd-mask-iphoneTips,
+.bankCardAdd-mask-warning,
+.bankCardAdd-mask-success {
+  width: 5rem;
+  background: white;
+  padding: .4rem .55rem;
+  border-radius: .16rem;
+  display: flex;
+  box-sizing: border-box;
+  flex-direction: column;
+  position: absolute;
+  align-items: center;
+  margin-top: -.4rem;
+  visibility: hidden;
+}
+
+.bankCardAdd-mask-success .icon {
+  height: 1.3rem;
+  width: 1.2rem;
+}
+
+.bankCardAdd-mask-success .title {
+  margin-top: .4rem;
+  font-size: .34rem;
+}
+
+.bankCardAdd-mask .header {
+  height: .54rem;
+  line-height: .54rem;
+}
+
+
+.bankCardAdd-mask .header .icon {
+  width: .54rem;
+  height: .54rem;
+  margin-right: .15rem;
+  float: left;
+}
+
+.bankCardAdd-mask .header .title {
+  font-size: .34rem;
+  float: left;
+}
+
+.bankCardAdd-mask .det {
+  line-height: .5rem;
+  font-size: .26rem;
+  text-align: center;
+  margin: .3rem 0 .28rem;
+}
+
+.bankCardAdd-mask .btn {
+  color: rgb(41, 164, 255);
+  border: 1px solid rgb(41, 164, 255);
+  height: .64rem;
+  line-height: .64rem;
+  padding: 0 .53rem;
+  border-radius: .32rem;
+}
+
+.bankCardAdd-mask-nameTips.active,
+.bankCardAdd-mask-iphoneTips.active,
+.bankCardAdd-mask-warning.active,
+.bankCardAdd-mask-success.active {
+  visibility: visible;
+}
