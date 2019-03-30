@@ -302,6 +302,12 @@
 .pay-bank-list .item .icon {
   height: .66rem;
   width: .66rem;
+  padding: 0 .06rem;
+}
+
+.pay-select-list .item .icon-bank {
+  height: .44rem;
+  width: .78rem;
 }
 
 .pay-select-list .item .is,
