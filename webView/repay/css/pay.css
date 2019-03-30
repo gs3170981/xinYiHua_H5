@@ -188,6 +188,7 @@
 .pay-pass {
   position: fixed;
   transform: translate3d(0, 100%, 0);
+  -webkit-transform: translate3d(0, 100%, 0);
   z-index: 1;
   width: 100%;
   bottom: 0;
@@ -197,8 +198,24 @@
   transition: all .3s ease;
 }
 
+.pay-select.active {
+  transform: translate3d(0, 0, 0);
+  -webkit-transform: translate3d(0, 0, 0);
+}
+
+.pay-select.move {
+  transform: translate3d(-100%, 0, 0);
+  -webkit-transform: translate3d(-100%, 0, 0);
+}
+
 .pay-bank-select {
   transform: translate3d(100%, 0, 0);
+  -webkit-transform: translate3d(100%, 0, 0);
+}
+
+.pay-bank-select.active {
+  transform: translate3d(0, 0, 0);
+  -webkit-transform: translate3d(0, 0, 0);
 }
 
 .pay-select-close {
@@ -241,6 +258,11 @@
 .pay-pass-money .unit {
   font-size: .32rem;
   margin-left: -.1rem;
+}
+
+.pay-pass.active {
+  transform: translate3d(0, 0, 0);
+  -webkit-transform: translate3d(0, 0, 0);
 }
 
 .pay-select-list {}
@@ -304,6 +326,7 @@
 
 .pay-pass {
   transform: translate3d(0, 100%, 0);
+  -webkit-transform: translate3d(0, 100%, 0);
   z-index: 2;
   height: 8.8rem;
 }
@@ -385,4 +408,12 @@
 
 .pay-selectSome {
   display: none;
+}
+
+.pay-bank-checkHas .is {
+  opacity: 0;
+}
+
+.pay-bank-checkHas.active .is {
+  opacity: 1;
 }

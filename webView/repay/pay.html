@@ -118,10 +118,10 @@
           <span class="title">中国银行(1904)</span>
           <img class="is" src="./img/true.png" />
         </li>
-        <li class="item pay-bank-checkHas">
+        <li class="item pay-bank-checkHas active">
           <img class="icon" src="./img/bank02.png" />
           <span class="title">招商银行(1698)</span>
-          <img class="is" style="opacity: 1;" src="./img/true.png" />
+          <img class="is" src="./img/true.png" />
         </li>
         <li class="item pay-bank-checkHas">
           <img class="icon" src="./img/bank01.png" />
@@ -213,7 +213,7 @@
     // 确认还款
     $('.pay-sum .btn').click(function () {
       $('.pay-mask').show()
-      $('.pay-select').css('transform', 'translate3d(0, 0, 0)')
+      $('.pay-select').addClass('active')
     })
     // 选择支付方式
     $('.pay-select-checkHas').click(function () {
@@ -225,21 +225,19 @@
     })
     // 银联快捷 - 点击
     $('.pay-select-unionpay').click(function () {
-      $('.pay-select').css('transform', 'translate3d(-100%, 0, 0)')
-      $('.pay-bank-select').css('transform', 'translate3d(0, 0, 0)')
+      $('.pay-select').addClass('move')
+      $('.pay-bank-select').addClass('active')
     })
     // 银联快捷 - 点击回退
     $('.pay-bank-left').click(function () {
-      $('.pay-select').css('transform', 'translate3d(0, 0, 0)')
-      $('.pay-bank-select').css('transform', 'translate3d(100%, 0, 0)')
+      $('.pay-select').removeClass('move')
+      $('.pay-bank-select').removeClass('active')
     })
     // 银联快捷选择支付方式
     $('.pay-bank-checkHas').click(function () {
-      var $is = $(this).find('.is')
-      if ($is.css('opacity') === '0') {
-        $('.pay-bank-checkHas .is').css('opacity', 0)
-        $is.css('opacity', 1)
-      }
+      $('.pay-bank-checkHas').removeClass('active')
+      $(this).addClass('active')
+      // do something...
     })
     // 使用新卡还款
     $('.pay-bank-new').click(function () {
@@ -247,12 +245,12 @@
     })
     // 关闭支付方式
     $('.pay-select-close').click(function () {
-      $('.pay-select').css('transform', 'translate3d(0, 100%, 0)')
+      $('.pay-select').removeClass('active')
       $('.pay-mask').hide()
     })
     // 立即还款
     $('.pay-bank-btn,.pay-select-btn').click(function () {
-      $('.pay-pass').css('transform', 'translate3d(0, 0, 0)')
+      $('.pay-pass').addClass('active')
     })
     // 忘记密码
     $('.pay-pass-forget').click(function () {
@@ -296,7 +294,7 @@
     })
     // 密码 - 点击回退
     $('.pay-pass-left').click(function () {
-      $('.pay-pass').css('transform', 'translate3d(0, 100%, 0)')
+      $('.pay-pass').removeClass('active')
       pass = ''
       $('.pay-pass-list .cir').css('opacity', 0)
     })
