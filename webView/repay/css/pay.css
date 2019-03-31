@@ -377,12 +377,12 @@
   border-color: rgb(253, 95, 9);
 }
 
-.pay-pass-forget {
+/* .pay-pass-forget {
   font-size: .28rem;
   color: rgb(23, 133, 255);
   text-align: right;
   margin-right: .2rem;
-}
+} */
 
 .pay-pass-number {
   height: 4.44rem;

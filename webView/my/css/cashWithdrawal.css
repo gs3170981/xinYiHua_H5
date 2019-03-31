@@ -116,8 +116,11 @@
   height: .5rem;
   width: 1.5rem;
   background: rgb(253, 183, 12);
-  line-height: .5rem;
+  /* line-height: .5rem; */
   color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-size: .26rem;
   text-align: center;
   margin-left: auto;
@@ -147,6 +150,7 @@
 }
 
 .cashWithdrawal-inputNumber {
+  background: #f7f8fa;
   transition: all .3s ease;
   -webkit-transition: all .3s ease;
   border-top: 1px solid rgb(222, 223, 224);
@@ -310,12 +314,12 @@
   opacity: 0;
 }
 
-.cashWithdrawal-pass-forget {
+/* .cashWithdrawal-pass-forget {
   font-size: .28rem;
   color: rgb(23, 133, 255);
   text-align: right;
   margin-right: .2rem;
-}
+} */
 
 .cashWithdrawal-pass-number {
   height: 4.44rem;
