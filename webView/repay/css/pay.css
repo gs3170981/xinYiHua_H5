@@ -115,6 +115,8 @@
   width: .42rem;
   height: .42rem;
   position: absolute;
+  top: 50%;
+  margin-top: -.21rem;
   right: 0;
 }
 
