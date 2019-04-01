@@ -48,3 +48,22 @@
   line-height: .8rem;
   padding: 0 .26rem;
 }
+
+.myNews-no {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.myNews-no .icon {
+  margin-top: 1.6rem;
+  width: 3.2rem;
+  height: 2.3rem;
+}
+
+.myNews-no .title {
+  margin-top: .35rem;
+  height: .35rem;
+  line-height: .35rem;
+  font-size: .32rem;
+}

@@ -55,7 +55,9 @@
 .bankCardAdd-list .item .btn {
   height: .48rem;
   margin-left: auto;
-  line-height: .48rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   padding: 0 .25rem;
   font-size: .26rem;
   color: rgb(41, 164, 255);
@@ -89,6 +91,7 @@
   left: 0;
   width: 100%;
   height: 100%;
+  overflow: hidden;
   background: rgba(0, 0, 0, .4);
   visibility: hidden;
   z-index: 1;
@@ -110,8 +113,10 @@
   box-sizing: border-box;
   flex-direction: column;
   position: absolute;
+  top: 20%;
+  left: 50%;
+  margin-left: -2.5rem;
   align-items: center;
-  margin-top: -.4rem;
   visibility: hidden;
 }
 
@@ -154,7 +159,10 @@
   color: rgb(41, 164, 255);
   border: 1px solid rgb(41, 164, 255);
   height: .64rem;
-  line-height: .64rem;
+  /* line-height: .64rem; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
   padding: 0 .53rem;
   border-radius: .32rem;
 }

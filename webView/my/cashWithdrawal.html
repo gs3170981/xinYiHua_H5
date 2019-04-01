@@ -111,9 +111,9 @@
       })
     // money输入
     $('.cashWithdrawal-inputNumber .list .item').click(function () {
-      let val = $('.cashWithdrawal-content-money .val').text()
-      let moneyAll = +$('.cashWithdrawal-content-tips .moneyAll').text()
-      let _thisVal = $(this).text()
+      var val = $('.cashWithdrawal-content-money .val').text()
+      var moneyAll = +$('.cashWithdrawal-content-tips .moneyAll').text()
+      var _thisVal = $(this).text()
       // 禁止多个"."同时存在
       if (_thisVal === '.' && ~val.indexOf('.')) {
         return
@@ -144,8 +144,8 @@
     })
     // money退格
     $('.cashWithdrawal-inputNumber .backspace').click(function () {
-      let moneyAll = +$('.cashWithdrawal-content-tips .moneyAll').text()
-      let val = $('.cashWithdrawal-content-money .val').text()
+      var moneyAll = +$('.cashWithdrawal-content-tips .moneyAll').text()
+      var val = $('.cashWithdrawal-content-money .val').text()
       val = val.substring(0, val.length - 1)
       if (+val <= moneyAll) {
         $('.cashWithdrawal-content-tips .label-error').hasClass('active') &&
@@ -177,7 +177,7 @@
     })
     // 全部提现
     $('.cashWithdrawal-content-tips .btn').click(function () {
-      let val = $('.cashWithdrawal-content-tips .moneyAll').text()
+      var val = $('.cashWithdrawal-content-tips .moneyAll').text()
       if (!$(this).hasClass('active')) {
         return
       }

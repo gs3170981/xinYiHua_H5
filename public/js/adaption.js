@@ -9,4 +9,7 @@
   if (!doc.addEventListener) return;
   win.addEventListener(resizeEvt, recalc, false);
   doc.addEventListener('DOMContentLoaded', recalc, false);
+  setTimeout(function () {
+    document.getElementsByTagName('html')[0].style.display = 'block';
+  }, 100)
 })(document, window);

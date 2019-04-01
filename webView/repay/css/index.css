@@ -20,6 +20,7 @@
 }
 
 .repayNo-btn {
+  margin-top: .8rem;
   width: 5.45rem;
   height: .9rem;
   font-size: .32rem;
@@ -76,7 +77,7 @@
   text-align: center;
   margin-left: .2rem;
   border-radius: .18rem 0 .18rem;
-  font-size: .1rem;
+  font-size: .22rem;
 }
 
 .repayHas-money {
@@ -141,7 +142,7 @@
 }
 
 .repayHas-footer {
-  margin-top: .9rem;
+  margin: .9rem 0 .45rem;
   color: #d3d4d5;
   text-align: center;
   font-size: .2rem;
