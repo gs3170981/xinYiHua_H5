@@ -1,0 +1,41 @@
+.taobResult {}
+
+.taobResult {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  letter-spacing: .02rem;
+}
+
+.taobResult .icon {
+  margin-top: 1.6rem;
+  width: 1.48rem;
+  height: 1.6rem;
+}
+
+.taobResult .title {
+  margin-top: .4rem;
+  height: .35rem;
+  line-height: .35rem;
+  font-size: .35rem;
+}
+
+.taobResult .tips {
+  margin-top: .25rem;
+  color: #979899;
+  height: .28rem;
+  line-height: .28rem;
+  font-size: .26rem;
+}
+
+.taobResult .btn {
+  margin-top: .65rem;
+  width: 5.45rem;
+  height: .9rem;
+  font-size: .32rem;
+  background: linear-gradient(to top, rgb(11, 148, 255), rgb(29, 194, 255));
+  color: white;
+  border-radius: .5rem;
+  line-height: .9rem;
+  text-align: center;
+}
