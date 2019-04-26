@@ -60,7 +60,7 @@
           <span class="title">还款减免</span>
           <div class="redu"><span class="unit">-￥</span>30.00</div>
         </li>
-        <!-- <li class="item paySome">
+        <!-- <li class="item paySome needsclick">
           <img class="icon" src="./img/repayment03.png" />
           <span class="title">部分还款</span>
           <img class="right" src="./img/right.png" />
@@ -195,19 +195,22 @@
       }
     })
     // 部分还款
-    new MobileSelect({
-      trigger: '.pay-selectSome',
-      title: '选择金额',
-      wheels: [{
-        data: ['3667.00', '3600.00', '3500.00', '3400.00', '3300.00']
-      }],
-      position: [2],
-      callback: function (indexArr, data) {
-        // do something...
-        console.log(data[0])
-      }
-    })
+    var select
     $('.paySome').click(function () {
+      if (!select) {
+        select = new MobileSelect({
+          trigger: '.pay-selectSome',
+          title: '选择金额',
+          wheels: [{
+            data: ['3667.00', '3600.00', '3500.00', '3400.00', '3300.00']
+          }],
+          position: [2],
+          callback: function (indexArr, data) {
+            // do something...
+            console.log(data[0])
+          }
+        })
+      }
       $('.pay-selectSome').click()
     })
     // 确认还款
