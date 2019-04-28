@@ -1,230 +1,222 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title>添加银行卡</title>
+    <link rel="stylesheet" href="../../public/css/index.css" />
+    <link rel="stylesheet" href="./css/bankCardAdd.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-  <title>添加银行卡</title>
-  <link rel="stylesheet" href="../../public/css/index.css" />
-  <link rel="stylesheet" href="./css/bankCardAdd.css" />
-</head>
-
-<!-- TODO
+  <!-- TODO
  *
  * 注释部分为相同页面的不同可能性
  *
  * -->
 
-<body>
-  <div class="bankCardAdd">
-    <ul class="bankCardAdd-list">
-      <li class="item">
-        <span class="title">持卡人</span>
-        <input class="input name" type="text" placeholder="请输入持卡人姓名" />
-        <img class="icon" show-to="bankCardAdd-mask-nameTips" src="./img/card_icon_warn@2x.png" />
-      </li>
-      <li class="item">
-        <span class="title">身份证</span>
-        <input class="input id-card" type="number" placeholder="请输入持卡人身份证号" />
-      </li>
-    </ul>
-    <ul class="bankCardAdd-list">
-      <li class="item">
-        <span class="title">选择银行</span>
-        <span class="bank-select">请选择收款银行</span>
-        <img class="icon-right" src="./img/wallet_icon_next@2x.png" />
-      </li>
-      <li class="item">
-        <span class="title">银行卡号</span>
-        <input class="input black-card" type="number" placeholder="请输入银行卡号" />
-      </li>
-      <li class="item">
-        <span class="title">预留手机</span>
-        <input class="input iphone" type="number" placeholder="请输入银行卡预留手机号" />
-        <img class="icon" show-to="bankCardAdd-mask-iphoneTips" src="./img/card_icon_warn@2x.png" />
-      </li>
-      <li class="item">
-        <span class="title">短信验证</span>
-        <input class="input ref" style="width: 3.5rem;" type="number" placeholder="请输入短信验证码" />
-        <span class="btn">获取</span>
-      </li>
-    </ul>
-    <p class="bankCardAdd-btn">确认绑定</p>
-    <div class="bankCardAdd-mask">
-      <section class="bankCardAdd-mask-nameTips">
-        <header class="header">
-          <img class="icon" src="./img/info.png" />
-          <span class="title">温馨提示</span>
-        </header>
-        <div class="det">
-          为保证您的账户资金安全，只能绑定认证用户本人的银行卡。
-        </div>
-        <p class="btn">我知道了</p>
-      </section>
-      <section class="bankCardAdd-mask-iphoneTips">
-        <header class="header">
-          <img class="icon" src="./img/info.png" />
-          <span class="title">手机号说明</span>
-        </header>
-        <div class="det" style="text-align: left;">
-          银行预留手机号是办理该银行卡时所填写的手机号码。没有预留手机或已停用，请联系银行客服处理。
-        </div>
-        <p class="btn">我知道了</p>
-      </section>
-      <section class="bankCardAdd-mask-warning">
-        <header class="header">
-          <img class="icon" src="./img/info.png" />
-          <span class="title">提醒</span>
-        </header>
-        <div class="det"></div>
-        <p class="btn">我知道了</p>
-      </section>
-      <section class="bankCardAdd-mask-success">
-        <img class="icon" src="./img/record_icon_paid@2x.png" />
-        <p class="title">银行卡绑定成功</p>
-      </section>
+  <body>
+    <div class="bankCardAdd">
+      <ul class="bankCardAdd-list">
+        <li class="item">
+          <span class="title">持卡人</span>
+          <input
+            class="input name"
+            type="text"
+            placeholder="请输入持卡人姓名"
+          />
+          <img
+            class="icon"
+            show-to="为保证您的账户资金安全，只能绑定认证用户本人的银行卡"
+            src="./img/card_icon_warn@2x.png"
+          />
+        </li>
+        <li class="item">
+          <span class="title">身份证</span>
+          <input
+            class="input id-card"
+            type="number"
+            placeholder="请输入持卡人身份证号"
+          />
+        </li>
+      </ul>
+      <ul class="bankCardAdd-list">
+        <li class="item">
+          <span class="title">选择银行</span>
+          <span class="bank-select">请选择收款银行</span>
+          <img class="icon-right" src="./img/wallet_icon_next@2x.png" />
+        </li>
+        <li class="item">
+          <span class="title">银行卡号</span>
+          <input
+            class="input black-card"
+            type="number"
+            placeholder="请输入银行卡号"
+          />
+        </li>
+        <li class="item">
+          <span class="title">预留手机</span>
+          <input
+            class="input iphone"
+            type="number"
+            placeholder="请输入银行卡预留手机号"
+          />
+          <img
+            class="icon"
+            show-to="银行预留手机号是办理该银行卡时所填写的手机号码。没有预留手机或已停用，请联系银行客服处理。"
+            src="./img/card_icon_warn@2x.png"
+          />
+        </li>
+        <li class="item">
+          <span class="title">短信验证</span>
+          <input
+            class="input ref"
+            style="width: 3.5rem;"
+            type="number"
+            placeholder="请输入短信验证码"
+          />
+          <span class="btn">获取</span>
+        </li>
+      </ul>
+      <p class="bankCardAdd-btn">确认绑定</p>
     </div>
-  </div>
-</body>
-<script src="../../public/js/fastclick.min.js"></script>
-<script src="../../public/js/jquery-2.1.1.min.js"></script>
-<script src="../../public/js/adaption.js"></script>
-<script>
-  (function ($) {
-    // icon的点击
-    $(".bankCardAdd .icon").click(function () {
-      $(".bankCardAdd-mask,." + $(this).attr("show-to") + "").addClass(
-        "active"
-      );
-    });
-    // 弹出层关闭 - 我知道了
-    $(".bankCardAdd-mask .btn").click(function () {
-      $(
-        ".bankCardAdd-mask,.bankCardAdd-mask-nameTips,.bankCardAdd-mask-iphoneTips,.bankCardAdd-mask-warning"
-      ).removeClass("active");
-    });
-    // 选择银行
-    $(".bankCardAdd .bank-select,.icon-right").click(function () {
-      console.log(1);
-      // do something...
-    });
-    // 获取验证码
-    var verCode = function (_this) {
-      var i = 60;
-      $(_this).addClass("active");
-      var timer = setInterval(function () {
-        $(_this).text(--i + "s");
-        if (!i) {
-          clearInterval(timer);
-          $(_this)
-            .removeClass("active")
-            .text("获取");
-        }
-      }, 1000);
+  </body>
+  <script src="../../public/js/fastclick.min.js"></script>
+  <script src="../../public/js/jquery-2.1.1.min.js"></script>
+  <script src="../../public/js/adaption.js"></script>
+  <script>
+    // 弱提示封装 - 不依赖于jq
+    var layerMsg = function(val) {
+      var newDiv = document.createElement("div");
+      var bodyWidth = document.body.offsetWidth * 0.1;
+      newDiv.className = "bankCardAdd-msg";
+      newDiv.innerText = val;
+      document.body.appendChild(newDiv);
+      var newDivStyle = window.getComputedStyle(newDiv);
+      newDiv.style.marginLeft =
+        -parseInt(newDivStyle.width) / 2 + bodyWidth + "px";
+      newDiv.style.marginTop =
+        -parseInt(newDivStyle.height) / 2 + bodyWidth + "px";
+      newDiv.style.opacity = 1;
+      setTimeout(function() {
+        newDiv.style.opacity = 0;
+        setTimeout(function() {
+          newDiv.remove();
+        }, 500);
+      }, 2500);
     };
-    $(".bankCardAdd-list .btn").click(function () {
-      var iphone = $(".bankCardAdd .iphone").val();
-      // 当前不可在倒计时时
-      if ($(this).hasClass("active")) {
-        return;
-      }
-      // 手机号码不可为空
-      if (!iphone) {
-        $(".bankCardAdd-mask,.bankCardAdd-mask-warning").addClass("active");
-        $(".bankCardAdd-mask-warning .det").text("手机号码不可为空!");
-        return;
-      }
-      // 手机号是否存在
-      if (
-        !/^(13[0-9]|15[012356789]|17[03678]|18[0-9]|14[57])[0-9]{8}$/.test(
-          iphone
-        )
-      ) {
-        $(".bankCardAdd-mask,.bankCardAdd-mask-warning").addClass("active");
-        $(".bankCardAdd-mask-warning .det").text("手机号码有误!");
-        return;
-      }
-      // do something...
-      verCode(this);
-    });
-    // 确认绑定
-    $(".bankCardAdd-btn").click(function () {
-      var name = $(".bankCardAdd .name").val();
-      var idCard = $(".bankCardAdd .id-card").val();
-      var blackCard = $(".bankCardAdd .black-card").val();
-      var iphone = $(".bankCardAdd .iphone").val();
-      var ref = $(".bankCardAdd .ref").val();
-      // 持卡人不可为空
-      if (!name) {
-        $(".bankCardAdd-mask,.bankCardAdd-mask-warning").addClass("active");
-        $(".bankCardAdd-mask-warning .det").text("持卡人不可为空!");
-        return;
-      }
-      // 身份证不可为空
-      if (!idCard) {
-        $(".bankCardAdd-mask,.bankCardAdd-mask-warning").addClass("active");
-        $(".bankCardAdd-mask-warning .det").text("身份证不可为空!");
-        return;
-      }
-      // 身份证是否存在
-      if (
-        !
-        /^(^[1-9]\d{7}((0\d)|(1[0-2]))(([0|1|2]\d)|3[0-1])\d{3}$)|(^[1-9]\d{5}[1-9]\d{3}((0\d)|(1[0-2]))(([0|1|2]\d)|3[0-1])((\d{4})|\d{3}[Xx])$)$/
-        .test(
-          idCard
-        )
-      ) {
-        $(".bankCardAdd-mask,.bankCardAdd-mask-warning").addClass("active");
-        $(".bankCardAdd-mask-warning .det").text("身份证有误!");
-        return;
-      }
-      // 银行卡号不可为空
-      if (!blackCard) {
-        $(".bankCardAdd-mask,.bankCardAdd-mask-warning").addClass("active");
-        $(".bankCardAdd-mask-warning .det").text("银行卡号不可为空!");
-        return;
-      }
-      // 银行卡号有误
-      if (!/^\d{16}|\d{19}$/.test(blackCard)) {
-        $(".bankCardAdd-mask,.bankCardAdd-mask-warning").addClass("active");
-        $(".bankCardAdd-mask-warning .det").text("银行卡号有误!");
-        return;
-      }
-      // 手机号码不可为空
-      if (!iphone) {
-        $(".bankCardAdd-mask,.bankCardAdd-mask-warning").addClass("active");
-        $(".bankCardAdd-mask-warning .det").text("手机号码不可为空!");
-        return;
-      }
-      // 手机号码是否存在
-      if (
-        !/^(13[0-9]|15[012356789]|17[03678]|18[0-9]|14[57])[0-9]{8}$/.test(
-          iphone
-        )
-      ) {
-        $(".bankCardAdd-mask,.bankCardAdd-mask-warning").addClass("active");
-        $(".bankCardAdd-mask-warning .det").text("手机号码有误!");
-        return;
-      }
-      // 短信验证不可为空
-      if (!ref) {
-        $(".bankCardAdd-mask,.bankCardAdd-mask-warning").addClass("active");
-        $(".bankCardAdd-mask-warning .det").text("短信验证不可为空!");
-        return;
-      }
-      // do something...
+    (function($) {
+      // icon的点击
+      $(".bankCardAdd .icon").click(function() {
+        layerMsg($(this).attr("show-to"));
+      });
+      // 选择银行
+      $(".bankCardAdd .bank-select,.icon-right").click(function() {
+        console.log(1);
+        // do something...
+      });
+      // 获取验证码
+      var verCode = function(_this) {
+        var i = 60;
+        $(_this).addClass("active");
+        var timer = setInterval(function() {
+          $(_this).text(--i + "s");
+          if (!i) {
+            clearInterval(timer);
+            $(_this)
+              .removeClass("active")
+              .text("获取");
+          }
+        }, 1000);
+      };
+      $(".bankCardAdd-list .btn").click(function() {
+        var iphone = $(".bankCardAdd .iphone").val();
+        // 当前不可在倒计时时
+        if ($(this).hasClass("active")) {
+          return;
+        }
+        // 手机号码不可为空
+        if (!iphone) {
+          layerMsg("手机号码不可为空!");
+          return;
+        }
+        // 手机号是否存在
+        if (
+          !/^(13[0-9]|15[012356789]|17[03678]|18[0-9]|14[57])[0-9]{8}$/.test(
+            iphone
+          )
+        ) {
+          layerMsg("手机号码有误!");
+          return;
+        }
+        // do something...
+        verCode(this);
+      });
+      // 确认绑定
+      $(".bankCardAdd-btn").click(function() {
+        var name = $(".bankCardAdd .name").val();
+        var idCard = $(".bankCardAdd .id-card").val();
+        var blackCard = $(".bankCardAdd .black-card").val();
+        var iphone = $(".bankCardAdd .iphone").val();
+        var ref = $(".bankCardAdd .ref").val();
+        // 持卡人不可为空
+        if (!name) {
+          layerMsg("持卡人不可为空!");
+          return;
+        }
+        // 身份证不可为空
+        if (!idCard) {
+          layerMsg("身份证不可为空!");
+          return;
+        }
+        // 身份证是否存在
+        if (
+          !/^(^[1-9]\d{7}((0\d)|(1[0-2]))(([0|1|2]\d)|3[0-1])\d{3}$)|(^[1-9]\d{5}[1-9]\d{3}((0\d)|(1[0-2]))(([0|1|2]\d)|3[0-1])((\d{4})|\d{3}[Xx])$)$/.test(
+            idCard
+          )
+        ) {
+          layerMsg("身份证有误!");
+          return;
+        }
+        // 银行卡号不可为空
+        if (!blackCard) {
+          layerMsg("银行卡号不可为空!");
+          return;
+        }
+        // 银行卡号有误
+        if (!/^\d{16}|\d{19}$/.test(blackCard)) {
+          layerMsg("银行卡号有误!");
+          return;
+        }
+        // 手机号码不可为空
+        if (!iphone) {
+          layerMsg("手机号码不可为空!");
+          return;
+        }
+        // 手机号码是否存在
+        if (
+          !/^(13[0-9]|15[012356789]|17[03678]|18[0-9]|14[57])[0-9]{8}$/.test(
+            iphone
+          )
+        ) {
+          layerMsg("手机号码有误!");
+          return;
+        }
+        // 短信验证不可为空
+        if (!ref) {
+          layerMsg("短信验证不可为空!");
+          return;
+        }
+        // do something...
 
-      // 成功则
-      // $('.bankCardAdd-mask,.bankCardAdd-mask-success').addClass('active')
-      // setTimeout(function () {
-      //   $('.bankCardAdd-mask,.bankCardAdd-mask-success').removeClass('active')
-      // }, 2000)
-      // 失败则
-      // $('.bankCardAdd-mask,.bankCardAdd-mask-warning').addClass('active')
-      // $('.bankCardAdd-mask-warning .det').text('后台返回的错误的信息')
-    });
-  })($);
-</script>
-
+        // 成功则
+        // layerMsg('银行卡绑定成功！')
+        // 失败则
+        // layerMsg('后台返回的错误的信息')
+      });
+    })($);
+  </script>
 </html>
