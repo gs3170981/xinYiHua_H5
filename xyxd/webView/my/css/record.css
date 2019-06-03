@@ -1,0 +1,148 @@
+.record {
+  position: relative;
+  padding-top: .3rem;
+  color: rgb(49, 50, 51);
+}
+
+.record-mask {
+  background: linear-gradient(to top, #f7f8fa 20%, rgb(24, 182, 255), rgb(23, 94, 255));
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 2rem;
+  z-index: -1;
+}
+
+.record-header {
+  overflow: hidden;
+  width: 6.9rem;
+  height: 2.7rem;
+  background: white;
+  border-radius: .1rem;
+  margin: 0 auto;
+}
+
+.record-header-icon {
+  height: 1.3rem;
+  width: 1.2rem;
+  display: block;
+  margin: .4rem auto .2rem;
+}
+
+.record-header-title {
+  font-size: .3rem;
+  text-align: center;
+  font-weight: 700;
+}
+
+.record-content,
+.record-list {
+  background: white;
+  border-radius: .1rem;
+  width: 6.9rem;
+  margin: .24rem auto;
+  padding: .65rem .6rem;
+  box-sizing: border-box;
+}
+
+.record-content-error {
+  font-size: .28rem;
+  line-height: .58rem;
+}
+
+.record-content-tips {
+  margin-top: 1.1rem;
+  overflow: hidden;
+}
+
+.record-content-tips .icon {
+  float: left;
+  height: .36rem;
+  width: .27rem;
+}
+
+.record-content-tips .tips {
+  position: relative;
+  font-size: .26rem;
+  margin-left: .15rem;
+  float: left;
+  z-index: 0;
+}
+
+.record-content-tips .tips:before {
+  content: '';
+  position: absolute;
+  bottom: -.05rem;
+  left: 0;
+  background: rgba(255, 190, 30, 0.11);
+  width: 100%;
+  height: .18rem;
+  z-index: -1;
+}
+
+.record-content-list {
+  background: rgb(250, 251, 252);
+  margin-top: .2rem;
+  padding: .35rem .3rem;
+  width: 5.7rem;
+  box-sizing: border-box;
+}
+
+.record-content-list .item {
+  line-height: .58rem;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.record-content-list .item .num {
+  float: left;
+  width: .33rem;
+  height: .33rem;
+  background: rgba(255, 190, 30, .2);
+  color: rgb(255, 190, 30);
+  line-height: .33rem;
+  font-size: .22rem;
+  border-radius: 50%;
+  text-align: center;
+}
+
+.record-content-list .item .val {
+  margin-left: .15rem;
+  font-size: .24rem;
+  float: left;
+  color: rgb(98, 99, 100);
+}
+
+.record-list {
+  padding: .3rem .6rem;
+}
+
+.record-content-item {
+  line-height: .82rem;
+  overflow: hidden;
+  font-size: .28rem;
+}
+
+.record-content-item .title {
+  float: left;
+  color: rgb(151, 152, 153);
+}
+
+.record-content-item .val {
+  float: right;
+  color: rgb(24, 25, 26);
+}
+
+.record-btn {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: linear-gradient(to right, rgb(11, 148, 255), rgb(29, 194, 255));
+  text-align: center;
+  height: .9rem;
+  line-height: .9rem;
+  color: white;
+  font-size: .34rem;
+}

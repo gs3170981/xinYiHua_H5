@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <title>收款银行卡</title>
+  <link rel="stylesheet" href="../../public/css/index.css">
+  <link rel="stylesheet" href="./css/bankCardMake.css">
+</head>
+
+<body>
+  <div class="bankCardMake">
+    <ul class="bankCardMake-list">
+      <li class="item">
+        <span class="title">选择银行</span>
+        <span class="val">招商银行</span>
+      </li>
+      <li class="item">
+        <span class="title">银行卡号</span>
+        <span class="val">6216****1964</span>
+      </li>
+      <li class="item">
+        <span class="title">预留手机</span>
+        <span class="val">189****8999</span>
+      </li>
+    </ul>
+    <p class="bankCardMake-tips">
+      <img class="icon" src="./img/card_icon_warn@2x.png">
+      <span class="title">提醒</span>
+    </p>
+    <p class="bankCardMake-tips-det">
+      1. 申请通过后，合作机构会将您的借款发放至该银行卡；
+      <br />
+      2. 重新绑定卡，则新卡将被激活为收款银行卡；
+      <br />
+      3. 未完成还款，不允许更换银行卡；
+    </p>
+    <p class="bankCardMake-btn">重新绑定</p>
+    <img class="bankCardMake-footer" src="./img/card_img_tip@2x.png">
+  </div>
+</body>
+<script src="../../public/js/fastclick.min.js"></script>
+<script src="../../public/js/jquery-2.1.1.min.js"></script>
+<script src="../../public/js/adaption.js"></script>
+<script>
+  (function ($) {
+    // 重新绑定
+    $('.bankCardMake-btn').click(function () {
+      // do something...
+    })
+  })($)
+</script>
+
+</html>

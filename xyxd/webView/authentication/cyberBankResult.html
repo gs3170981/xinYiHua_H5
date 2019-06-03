@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <title>网银账单认证结果页</title>
+  <link rel="stylesheet" href="../../public/css/index.css">
+  <link rel="stylesheet" href="./css/cyberBankResult.css">
+</head>
+
+<!-- TODO
+ *
+ * 注释部分为相同页面的不同可能性
+ *
+ * -->
+
+<body>
+  <div class="cyberBankResult">
+    <!-- <section class="cyberBankResult">
+      <img class="icon" src="./img/auth_img_succed@2x.png">
+      <p class="title">网银账单认证成功</p>
+      <p class="tips">恭喜您已成为网银账单认证用户</p>
+    </section> -->
+    <section class="cyberBankResult">
+      <img class="icon" src="./img/auth_img_fail@2x.png">
+      <p class="title">网银账单认证失败</p>
+      <p class="tips">请按照提示完成相应动作</p>
+      <p class="btn">再试一次</p>
+    </section>
+  </div>
+</body>
+<script src="../../public/js/jquery-2.1.1.min.js"></script>
+<script>
+  (function () {
+    // 再试一次
+    $('.cyberBankResult .btn').click(function () {
+      // do something...
+    })
+  })($)
+</script>
+<script src="../../public/js/fastclick.min.js"></script>
+<script src="../../public/js/adaption.js"></script>
+
+</html>

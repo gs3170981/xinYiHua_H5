@@ -1,0 +1,149 @@
+.repay {}
+
+.repayNo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.repayNo-icon {
+  margin-top: 1.6rem;
+  width: 3.2rem;
+  height: 2.3rem;
+}
+
+.repayNo-title {
+  color: #979899;
+  height: 1.1rem;
+  line-height: 1.1rem;
+  font-size: .32rem;
+}
+
+.repayNo-btn {
+  margin-top: .8rem;
+  width: 5.45rem;
+  height: .9rem;
+  font-size: .32rem;
+  background: linear-gradient(to top, rgb(11, 148, 255), rgb(29, 194, 255));
+  color: white;
+  border-radius: .5rem;
+  line-height: .9rem;
+  text-align: center;
+}
+
+.repayHas-loading-btn {
+  background: rgba(255, 255, 255, .2);
+  color: #0073ff;
+  border: none !important;
+}
+
+.repayHas {
+  position: relative;
+}
+
+.repayHas-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: -1;
+  height: 5.14rem;
+  background: linear-gradient(to top, rgb(247, 248, 250), rgb(24, 182, 255) 15%, rgb(23, 94, 255));
+}
+
+.repayHas-header {
+  height: 3.32rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  justify-content: center;
+}
+
+.repayHas-title {
+  height: .55rem;
+  font-size: .32rem;
+  line-height: .55rem;
+  position: relative;
+}
+
+.repayHas-tips {
+  width: .9rem;
+  height: .38rem;
+  background: #ffbe1e;
+  position: absolute;
+  line-height: .4rem;
+  top: .12rem;
+  text-align: center;
+  margin-left: .2rem;
+  border-radius: .18rem 0 .18rem;
+  font-size: .22rem;
+}
+
+.repayHas-money {
+  height: .85rem;
+  line-height: .85rem;
+  font-size: .6rem;
+}
+
+.repayHas-money-unit {
+  font-size: .36rem;
+  margin-left: -.1rem;
+}
+
+.repayHas-btn {
+  font-size: .3rem;
+  height: .6rem;
+  margin-top: .15rem;
+  line-height: .6rem;
+  width: 2.1rem;
+  text-align: center;
+  border-radius: .5rem;
+  border: 1px solid white;
+}
+
+.repayHas-content {
+  width: 6.9rem;
+  background: white;
+  padding: .6rem .55rem;
+  box-sizing: border-box;
+  margin: 0 auto;
+  border-radius: .1rem;
+}
+
+.repayHas-content-title {
+  height: .4rem;
+  line-height: .4rem;
+  font-size: .32rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: .5rem;
+}
+
+.repayHas-content-tips {
+  margin: 0 .22rem 0 .17rem;
+  font-size: .1rem;
+  color: #ffbe1e;
+}
+
+.repayHas-content-item {
+  height: .83rem;
+  line-height: .83rem;
+  font-size: .28rem;
+}
+
+.repayHas-content-item .label {
+  color: #979899;
+  float: left;
+}
+
+.repayHas-content-item .val {
+  float: right;
+}
+
+.repayHas-footer {
+  margin: .9rem 0 .45rem;
+  color: #d3d4d5;
+  text-align: center;
+  font-size: .2rem;
+}
