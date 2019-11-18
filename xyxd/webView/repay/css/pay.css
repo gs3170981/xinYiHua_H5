@@ -187,7 +187,8 @@
 
 .pay-select,
 .pay-bank-select,
-.pay-pass {
+.pay-pass,
+.pay-weixPay {
   position: fixed;
   transform: translate3d(0, 100%, 0);
   -webkit-transform: translate3d(0, 100%, 0);
@@ -221,7 +222,8 @@
   -webkit-transform: translate3d(0, 0, 0);
 }
 
-.pay-select-close {
+.pay-select-close,
+.pay-weixPay-close {
   position: absolute;
   padding: 0 .5rem .5rem 0;
   left: .32rem;
@@ -231,7 +233,8 @@
 }
 
 .pay-bank-left,
-.pay-pass-left {
+.pay-pass-left,
+.pay-weixPay-left {
   position: absolute;
   padding: 0 .5rem .5rem 0;
   left: .32rem;
@@ -263,7 +266,8 @@
   margin-left: -.1rem;
 }
 
-.pay-pass.active {
+.pay-pass.active,
+.pay-weixPay.active {
   transform: translate3d(0, 0, 0);
   -webkit-transform: translate3d(0, 0, 0);
 }
@@ -425,4 +429,43 @@
 
 .pay-bank-checkHas.active .is {
   opacity: 1;
+}
+
+.pay-weixPay {
+  background-color: #21aa38;
+  transform: translate3d(0, 100%, 0);
+  -webkit-transform: translate3d(0, 100%, 0);
+  z-index: 2;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-image: url('../img/left.png');
+  background-size: 1%;
+}
+
+.pay-weixPay-title {
+  color: white;
+  font-size: .46rem;
+}
+
+.pay-weixPay-icon {
+  margin-top: .15rem;
+  height: 2.85rem;
+  width: 2.82rem;
+}
+
+.pay-weixPay-name {
+  margin-top: .12rem;
+  color: white;
+  font-size: .35rem;
+}
+
+.pay-weixPay-tips {
+  font-size: .25rem;
+  color: white;
+  margin-top: .1rem;
+  line-height: .5rem;
+  width: 80%;
 }
